@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ouija Automática</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="frase-intro">Un misterioso vaso se mueve solo sobre un tablero con letras, parece que intenta decirnos algo... ¡Espera pero las letras estan desordenadas!</div>
+    <div class="ouija-board">
+        <div class="letters">
+            <!-- Letras de la Ouija -->
+            <div class="row">
+                <span data-letter="A">A</span><span data-letter="B">B</span><span data-letter="C">C</span>
+                <span data-letter="D">D</span><span data-letter="E">E</span><span data-letter="F">F</span>
+                <span data-letter="G">G</span>
+                <span data-letter="H">H</span><span data-letter="I">I</span><span data-letter="J">J</span>
+                <span data-letter="K">K</span><span data-letter="L">L</span><span data-letter="M">M</span>
+                <span data-letter="N">N</span>
+            </div>
+            <div class="row">
+                <span data-letter="O">O</span><span data-letter="P">P</span><span data-letter="Q">Q</span>
+                <span data-letter="R">R</span><span data-letter="S">S</span><span data-letter="T">T</span>
+                <span data-letter="U">U</span>
+                <span data-letter="V">V</span><span data-letter="W">W</span><span data-letter="X">X</span>
+                <span data-letter="Y">Y</span><span data-letter="Z">Z</span>
+            </div>
+        </div>
+
+        <div class="planchette"></div>
+    </div>
+
+    <!-- Contenedor para mostrar la frase secreta -->
+    <div class="secret-phrase">
+        <h2>Frase secreta: <span id="revealed-phrase"></span></h2>
+    </div>
+
+    <!-- Formulario de respuesta -->
+        <table cellspacing="20"><tbody><tr><td><h2>RESPUESTA</h1>
+        <form id="answer-form">
+            <label for="name"><b>Tu keko:</b></label>
+            <input type="text" id="name" placeholder="Ingresa tu keko" required>
+
+            <label for="answer"><b>Tu respuesta:</b></label>
+            <input type="text" id="answer" placeholder="Ingresa tu respuesta" required>
+
+            <button type="submit">Enviar respuesta</button>
+            <p id="feedback"></p>
+        </form></td>
+
+        <td><div class="correct-answers">
+            <h2>LISTA DE ACERTADOS</h2>
+            <ul id="correct-list"></ul>
+        </div></td></tbody></table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'Yuji';
+    src: url(YujiMai-Regular.ttf);
+  }
+
+@font-face {
+    font-family: 'Halloween';
+    src: url(Halloween\ Spooky.otf);
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    flex-direction: column;
+}
+
+.frase-intro {
+    font-size: 40px;
+    width: 50%;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Halloween';
+    color: #000;
+}
+
+.ouija-board {
+    position: relative;
+    width: 563px;
+    height: 402px;
+    background-image: url(https://i.imgur.com/WmbQrGG.png);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.letters {
+    text-align: center;
+    margin-top: 135px;
+    font-family: 'Yuji';
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+span {
+    font-size: 30px;
+    margin: 0px 5px;
+    color: #000;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+span:hover {
+    transform: scale(1.2);
+}
+
+.planchette {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -10%);
+    pointer-events: none;
+    transition: all 1s ease;
+}
+
+.secret-phrase {
+    margin-top: 30px;
+    color: white;
+}
+
+.secret-phrase h2 {
+    font-size: 24px;
+    color: #16101c;
+    font-family: arial;
+}
+
+/*Formulario de respuesta*/
+
+h1, h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Halloween';
+    color: #2d262d;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+p#feedback {
+    margin-top: 10px;
+    font-size: 14px;
+    color: red;
+}
+
+.correct-answers {
+    margin-top: 30px;
+    text-align: left;
+    width: 600px;
+}
+
+.correct-answers ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.correct-answers li {
+    padding: 5px;
+    background-color: #d4edda;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: #155724;
+    font-size: 14px;
+}
